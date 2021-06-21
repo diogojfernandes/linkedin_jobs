@@ -1,5 +1,5 @@
 # LinkedIn Jobs in Portugal: Project Overview
-* Scraped over 800 job posts from LinkedIn using Python, Selenium and Beautiful
+* Scraped over 800 job posts from LinkedIn using Python, Selenium and BeautifulSoup
 * Data exploration and analysis
 
 ## Code and Resources Used 
