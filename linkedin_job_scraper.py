@@ -49,7 +49,8 @@ driver.maximize_window()
 
 df = pd.DataFrame(columns = ["Id","Position","Location","Company Name","Num Applicants","Sector","Num Employees","Position Type","Remote","Easy Apply","Job Details"])
 
-job_title_urls = ['https://www.linkedin.com/jobs/search/?geoId=100364837&keywords=data%20analyst&location=Portugal&start=', 'https://www.linkedin.com/jobs/search/?geoId=100364837&keywords=data%20engineer&location=Portugal&start=', 'https://www.linkedin.com/jobs/search/?geoId=100364837&keywords=data%20scientist&location=Portugal&start=']
+# job_title_urls = ['https://www.linkedin.com/jobs/search/?geoId=100364837&keywords=data%20analyst&location=Portugal&start=', 'https://www.linkedin.com/jobs/search/?geoId=100364837&keywords=data%20engineer&location=Portugal&start=', 'https://www.linkedin.com/jobs/search/?geoId=100364837&keywords=data%20scientist&location=Portugal&start=']
+job_title_urls = ['https://www.linkedin.com/jobs/search/?geoId=100364837&keywords=data%20scientist&location=Portugal&start=']
 
 for job_title_url in job_title_urls:
     # Loop through the job listings pages
@@ -91,8 +92,6 @@ for job_title_url in job_title_urls:
             previous_jobs_length = actual_jobs_length
             jobs_list = driver.find_elements_by_class_name("job-card-list__title")
             actual_jobs_length = len(jobs_list)
-            # print(previous_jobs_length)
-            # print(actual_jobs_length)
 
         # Find job postings
         all_jobs = []
@@ -220,7 +219,7 @@ for job_title_url in job_title_urls:
                 
                 job_index += 1
 
-                print(str(len(df)) + "jobs collected!")
+                print(str(len(df)) + " jobs collected!")
             except:
                 pass
 
